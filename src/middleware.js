@@ -120,6 +120,7 @@ function apiMiddleware({ getState }) {
         [action, getState(), res]
       ));
     } else {
+      console.log('mw error response:', res)
       return next(await actionWith(
         {
           ...failureType,
